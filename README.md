@@ -1,0 +1,2 @@
+# AutoCutB
+A ImageJ plugin
