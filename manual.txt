@@ -1,0 +1,36 @@
+20161026 和田宝成@CDB形態形成シグナル
+
+Plugin Name
+	AutoCutB
+
+FileName
+	AutoCutB_.jar
+
+製作者
+	和田　宝成
+
+概要
+	AutoCutBackgroundの略
+	最頻出値（ヒストグラム上の最高ピーク値）もしくは平均値を自動で判断しその値に任意の値掛け合わせ、画像全体からその値を引くプラグイン
+	任意に選択した領域を用いることも可能
+	stack画像において最初の１枚目の値を全ての画像に使用するのか、各画像枚に値を取るのかを選択可能
+
+
+機能説明
+
+	ComboBox : method
+		最頻出および平均値の選択
+	
+	TextArea : extend value
+		上記メソッドで取得された値に掛ける値
+	
+	CheckBox : Subtract background from self slice
+		check - 各画像毎に引く値を計算する
+		uncheck - 最初の画像で計算された値を各画像にも適応する
+
+その他の詳細情報
+
+
+注意点
+	各画像より計算する場合は基本的には値は異なると考えられ、このことが画像処理において適当かどうかはその後の解析等を鑑みて判断する
+	わからない場合は先頭画像の明らかな背景部分を選択し、Subtract background from self sliceのcheckを外して計算するほうが無難
